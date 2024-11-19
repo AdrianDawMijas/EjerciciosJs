@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fondo aleatorio</title>
+  <style>
+    /* CSS para que la capa de fondo ocupe toda la pantalla */
+    #fondo {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Generar colores aleatorios
+    const rojo = parseInt(Math.random() * 255);
+    const verde = parseInt(Math.random() * 255);
+    const azul = parseInt(Math.random() * 255);
+
+    // Crear un elemento div dinámicamente
+    const fondo = document.createElement('div');
+    fondo.id = 'fondo';
+    fondo.style.backgroundColor = `rgb(${rojo}, ${verde}, ${azul})`;
+
+    // Añadir el elemento al body
+    document.body.appendChild(fondo);
+  </script>
+</body>
+</html>
